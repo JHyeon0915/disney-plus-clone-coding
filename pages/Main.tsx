@@ -1,19 +1,17 @@
+import React from 'react';
 import styled from 'styled-components';
-import Logo from 'assets/logo.svg'
-import BgImg from 'assets/login-background.jpg'
-import Cta1 from 'assets/cta-logo-one.svg';
-import Cta2 from 'assets/cta-logo-two.png';
+import Image from 'next/image';
 
-function Main(): JSX.Element {
+const Main = () => {
   return (
-    <>
+    <React.Fragment>
       <Header>
-        <img src={Logo} alt="logo" />
+        <Image src="/assets/logo.svg" alt="logo" />
         <LoginBtn>LOGIN</LoginBtn>
       </Header>
       <Body>
         <ContentWrapper>
-          <img src={Cta1} alt="" />
+          <Image src="/assets/cta-logo-one.svg" alt="" />
           <BlueBtn type="button">
             GET ALL THERE
           </BlueBtn>
@@ -21,10 +19,10 @@ function Main(): JSX.Element {
             Get PRemier Access to Raya and the Last Dragon for an additional fee with a Disney+ subscription.
             As of 03/226/21, the price of Disney+ and The Disney Bundel will increase by $1.
           </div>
-          <img src={Cta2} alt="" />
+          <Image src="/assets/cta-logo-two.png" alt="" />
         </ContentWrapper>
       </Body>
-    </>
+    </React.Fragment>
   );
 }
 
@@ -50,7 +48,7 @@ const Body = styled.div `
   align-items: center;
   width: 100%;
   height: 92vh;
-  background: url(${BgImg});
+  background: url('/assets/login-background.jpg');
 `;
 
 const ContentWrapper = styled.div `
