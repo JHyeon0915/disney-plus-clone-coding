@@ -1,23 +1,25 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 
-const Login = () => {
+const Signup = () => {
   return (
     <Wrapper>
       <H1>login</H1>
       <Form>
-        <label htmlFor="email" >email:</label>
-        <input type="email" id="email"/>      
+        <label htmlFor="name" >name:</label>
+        <input type="text" />
+        <label htmlFor="email">email:</label>
+        <input type="password" id="email" /> 
         <label htmlFor="password">password:</label>
-        <input type="password" id="password" /> 
-        <LoginBtn type="button">Login</LoginBtn>
+        <input type="password" id="password" />
+        <SignupBtn type="button">Signup</SignupBtn>
       </Form>
-      <Link href="/signup" style={{color: 'black', textDecoration: 'underline'}}>Sign Up</Link>
+      <Link href="/login" style={{color: 'black', textDecoration: 'underline'}}>Login</Link>
     </Wrapper>
   );
 }
 
-export default Login;
+export default Signup;
 
 const Wrapper = styled.div`
   display: flex;
@@ -46,7 +48,7 @@ const Form = styled.form`
   justify-content: start;
 `;
 
-const LoginBtn = styled.button`
+const SignupBtn = styled.button`
   height: 45px;
   margin: 1rem 0;
   background-color: #113ccf;
