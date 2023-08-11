@@ -10,7 +10,9 @@ const Login = () => {
         <input type="email" id="email"/>      
         <label htmlFor="password">password:</label>
         <input type="password" id="password" /> 
-        <LoginBtn type="button">Login</LoginBtn>
+        <Link href="/greeting">
+          <LoginBtn type="button">Login</LoginBtn>
+        </Link>
       </Form>
       <Link href="/signup" style={{color: 'black', textDecoration: 'underline'}}>Sign Up</Link>
     </Wrapper>
@@ -24,7 +26,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  height: 100%;
+  height: fit-content;
+  padding-top: 9rem;
 
 label {
   font-weight: bold;
@@ -47,6 +50,7 @@ const Form = styled.form`
 `;
 
 const LoginBtn = styled.button`
+  width: 100%;
   height: 45px;
   margin: 1rem 0;
   background-color: #113ccf;
@@ -54,5 +58,10 @@ const LoginBtn = styled.button`
   text-transform: capitalize;
   border: none;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+&:hover {
+  box-shadow: 2px 3px 5px lightgrey;
+}
 `
